@@ -76,7 +76,7 @@ public class Plugin : BaseUnityPlugin
             {
                 if (NPCManager.manage.npcStatus[i].hasMet && NPCManager.manage.NPCDetails[i].birthSeason == WorldManager.Instance.month && NPCManager.manage.NPCDetails[i].birthday == todaysDate)
                 {
-                    var reminder = "I've just remembered that it is " + NPCManager.manage.NPCDetails[i].NPCName + "'s birthday today!";
+                    var reminder = "I've just remembered that it's " + NPCManager.manage.NPCDetails[i].NPCName + "'s birthday today!";
                     NotificationManager.manage.createChatNotification(reminder);
                     var advice = "I seem to recall that they like " + NPCManager.manage.NPCDetails[i].favouriteFood.itemName;
                     NotificationManager.manage.createChatNotification(advice);
@@ -88,7 +88,7 @@ public class Plugin : BaseUnityPlugin
             TownEvent townEvent = TownEventManager.manage.checkEventForToday(todaysDate);
             if (townEvent != null)
             {
-                var reminder = "I've jsut remembered that " + townEvent.getEventName() + " is on today!";
+                var reminder = "I've just remembered that " + townEvent.getEventName() + " is on today!";
                 NotificationManager.manage.createChatNotification(reminder);
             }
 
